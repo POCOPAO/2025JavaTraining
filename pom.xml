@@ -28,6 +28,7 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<mapstruct.version>1.5.5.Final</mapstruct.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -53,6 +54,15 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		
+	  	<!-- MapStruct API -->
+  		<dependency>
+    		<groupId>org.mapstruct</groupId>
+    		<artifactId>mapstruct</artifactId>
+    		<version>${mapstruct.version}</version>
+  		</dependency>
+
+		
 		<!-- Validation -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

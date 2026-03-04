@@ -11,8 +11,8 @@ import jakarta.persistence.Table;
 
 
 @Entity
-@Table(name = "books")
-public class Book {
+@Table(name = "movies")
+public class Movie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,20 +22,19 @@ public class Book {
     @Column(name = "title", nullable = false, length = 50)
     private String title;
 
-    @Column(name = "author", nullable = false, length = 50)
-    private String author;
+    @Column(name = "director", nullable = false, length = 50)
+    private String director;
 
-    // Map DB column `is_available` to Java property `available`
-    @Column(name = "is_available", nullable = false)
-    private Boolean available;
+    @Column(name = "is_showing", nullable = false)
+    private Boolean isShowing;
 
     /** JPA requires a no-arg constructor */
-    public Book() {}
+    public Movie() {}
 
-    public Book(String title, String author, Boolean available) {
+    public Movie(String title, String director, Boolean isShowing) {
         this.title = title;
-        this.author = author;
-        this.available = available;
+        this.director = director;
+        this.isShowing = isShowing;
     }
 
     // --- Getters / Setters ---
@@ -45,11 +44,11 @@ public class Book {
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
 
-    public String getAuthor() { return author; }
-    public void setAuthor(String author) { this.author = author; }
+    public String getDirector() { return director; }
+    public void setDirector(String author) { this.director = author; }
 
     /** Business-friendly naming */
-    public Boolean getAvailable() { return available; }
-    public void setAvailable(Boolean available) { this.available = available; }
+    public Boolean getIsShowing() { return isShowing; }
+    public void setIsShowing(Boolean isShowing) { this.isShowing = isShowing; }
 
 }
