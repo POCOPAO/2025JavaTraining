@@ -78,7 +78,7 @@ public class MovieController {
 
 		long count = movieService.deleteByTitleAndDirector(title, director);
 		if (count == 0) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No book found with given title and director.");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No movie found with given title and director.");
 		}
 		return ResponseEntity.ok("Deleted " + count + " record(s).");
 	}

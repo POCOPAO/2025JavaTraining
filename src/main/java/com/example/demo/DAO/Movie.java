@@ -45,7 +45,7 @@ public class Movie {
     public void setTitle(String title) { this.title = title; }
 
     public String getDirector() { return director; }
-    public void setDirector(String author) { this.director = author; }
+    public void setDirector(String director) { this.director = director; }
 
     /** Business-friendly naming */
     public Boolean getIsShowing() { return isShowing; }
